@@ -5,11 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://davidlynch.org/projects/maphilight/jquery.maphilight.js"></script>
 </head>
 <body>
     <div id="wrapper" class="main-image-wrapper">
-        <img src="./images/expo2020.svg" alt="expo 2020 logo">
+        <img src="./images/expo2020.svg" alt="expo 2020 logo" usemap="#image">
     </div>
+
+    <map name="image" id="image">
+        <area class="area" target="_blank" alt="test1" title="test1" href="#" coords="531,46,539,31,552,20,572,14,590,11,603,15,618,22,627,29,630,34,635,50,583,49" shape="poly">
+        <area class="area" target="_blank" alt="test2" title="test2" href="#" coords="532,45,536,77,545,93,566,109,584,49" shape="poly">
+        <area class="area" target="_blank" alt="test3" title="test3" href="#" coords="601,102,613,92,630,75,633,53,590,51,572,105" shape="poly">
+    </map>
+
     <script src="./src/index.js"></script>
+
+    <!-- Responsive map -->
+    <script src="./src/plugin/jQuery-rwdImageMaps-master/jquery.rwdImageMaps.min.js"></script>
+    <script>
+        $('img[usemap]').rwdImageMaps();
+        $('img[usemap]').maphilight();
+    </script>
 </body>
 </html>
