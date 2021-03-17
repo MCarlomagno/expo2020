@@ -24,8 +24,11 @@
     <!-- Responsive map -->
     <script src="./src/plugin/jQuery-rwdImageMaps-master/jquery.rwdImageMaps.min.js"></script>
     <script>
-        $('img[usemap]').rwdImageMaps();
-        $('img[usemap]').maphilight();
+        function main() {
+            $('img[usemap]').rwdImageMaps();
+            $('img[usemap]').maphilight();
+        }
+        window.onload = main;
     </script>
 </body>
 </html>
