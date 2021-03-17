@@ -1,0 +1,21 @@
+html {
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+}
+
+.main-image-wrapper {
+    height: 100vh;
+    text-align: center;
+    white-space: nowrap;
+}
+
+img {
+    height: 100%;
+    max-height: 750px;
+    margin: auto;   
+    vertical-align: middle;
+}
+
