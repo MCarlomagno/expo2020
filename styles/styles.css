@@ -20,6 +20,7 @@ img {
 }
 
 .tooltip {
+    display: none;
     position: absolute;
     padding: 10px 16px;
     background: white;
