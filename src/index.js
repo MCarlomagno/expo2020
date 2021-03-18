@@ -6,7 +6,7 @@ function main() {
     let data = {};
     data.alwaysOn = true;
     data.fillColor = '0000FF';
-    data.fillOpacity = '0.3';
+    data.fillOpacity = '0.2';
     data.stroke = false;
     $('area').data('maphilight', data).trigger('alwaysOn.maphilight');
 }
@@ -25,7 +25,7 @@ function highlightArea(element) {
     let data = {};
     data.alwaysOn = true;
     data.fillColor = '0000FF';
-    data.fillOpacity = '0.7';
+    data.fillOpacity = '0.5';
     data.stroke = false;
     $(`area[alt="${element.alt}"]`).data('maphilight', data).trigger('alwaysOn.maphilight');
 }
@@ -34,7 +34,7 @@ function playdownArea(element) {
     let data = {};
     data.alwaysOn = true;
     data.fillColor = '0000FF';
-    data.fillOpacity = '0.3';
+    data.fillOpacity = '0.2';
     data.stroke = false;
     $(`area[alt="${element.alt}"]`).data('maphilight', data).trigger('alwaysOn.maphilight');
 }
