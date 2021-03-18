@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Document</title>
+    <title>Expo 2020</title>
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://davidlynch.org/projects/maphilight/jquery.maphilight.js"></script>
+    <script type="text/javascript" src="https://projects.davidlynch.org/maphilight/jquery.maphilight.js"></script>
 </head>
 <body>
     <div id="wrapper" class="main-image-wrapper">
@@ -15,21 +15,14 @@
     </div>
 
     <map name="image" id="image">
-        <area class="area" target="_blank" alt="test1" title="test1" href="#" coords="531,46,539,31,552,20,572,14,590,11,603,15,618,22,627,29,630,34,635,50,583,49" shape="poly">
-        <area class="area" target="_blank" alt="test2" title="test2" href="#" coords="532,45,536,77,545,93,566,109,584,49" shape="poly">
-        <area class="area" target="_blank" alt="test3" title="test3" href="#" coords="601,102,613,92,630,75,633,53,590,51,572,105" shape="poly">
+        <area onmouseover="onMouseOverArea(this)" onmouseout="onMouseOutArea(this)" target="_blank" alt="test1" title="test1" href="#" coords="529,40,638,43,630,29,617,17,595,11,578,10,561,13,543,23" shape="poly">
+        <area onmouseover="onMouseOverArea(this)" onmouseout="onMouseOutArea(this)" target="_blank" alt="test2" title="test2" href="#" coords="531,41,639,43,639,65,628,88,543,85,534,72,531,59" shape="poly">
+        <area onmouseover="onMouseOverArea(this)" onmouseout="onMouseOutArea(this)" target="_blank" alt="test3" title="test3" href="#" coords="612,98,627,88,538,84,553,96,567,108,576,119,577,125,585,146,589,135,591,126,596,119,601,111" shape="poly">
     </map>
 
-    <script src="./src/index.js"></script>
 
     <!-- Responsive map -->
     <script src="./src/plugin/jQuery-rwdImageMaps-master/jquery.rwdImageMaps.min.js"></script>
-    <script>
-        function main() {
-            $('img[usemap]').rwdImageMaps();
-            $('img[usemap]').maphilight();
-        }
-        window.onload = main;
-    </script>
+    <script src="./src/index.js"></script>
 </body>
 </html>
