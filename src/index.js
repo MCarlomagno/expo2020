@@ -1,42 +1,45 @@
-
 $('img[usemap]').rwdImageMaps();
 $('img[usemap]').maphilight();
 
+
+const MAP_HIGHLIGHT_INACTIVE = {
+    alwaysOn: true,
+    fillColor: '0000FF',
+    fillOpacity: '0.2',
+    stroke: false
+}
+
+const MAP_HIGHLIGHT_ACTIVE = {
+    alwaysOn: true,
+    fillColor: '0000FF',
+    fillOpacity: '0.5',
+    stroke: false
+}
+
 function main() {
-    let data = {};
-    data.alwaysOn = true;
-    data.fillColor = '0000FF';
-    data.fillOpacity = '0.2';
-    data.stroke = false;
-    $('area').data('maphilight', data).trigger('alwaysOn.maphilight');
+    $('area').data('maphilight', MAP_HIGHLIGHT_INACTIVE).trigger('alwaysOn.maphilight');
 }
 
 function onMouseOverArea(element, event) {
-    highlightArea(element);
+    showHighlightArea(element);
     showTooltip(event, element);
 }
 
 function onMouseOutArea(element, event) {
-    playdownArea(element);
+    hideHighlightArea(element);
     hideTooltip();
 }
 
-function highlightArea(element) {
-    let data = {};
-    data.alwaysOn = true;
-    data.fillColor = '0000FF';
-    data.fillOpacity = '0.5';
-    data.stroke = false;
-    $(`area[alt="${element.alt}"]`).data('maphilight', data).trigger('alwaysOn.maphilight');
+function showHighlightArea(element) {
+    $(`area[alt="${element.alt}"]`)
+        .data('maphilight', MAP_HIGHLIGHT_ACTIVE)
+        .trigger('alwaysOn.maphilight');
 }
 
-function playdownArea(element) {
-    let data = {};
-    data.alwaysOn = true;
-    data.fillColor = '0000FF';
-    data.fillOpacity = '0.2';
-    data.stroke = false;
-    $(`area[alt="${element.alt}"]`).data('maphilight', data).trigger('alwaysOn.maphilight');
+function hideHighlightArea(element) {
+    $(`area[alt="${element.alt}"]`)
+        .data('maphilight', MAP_HIGHLIGHT_INACTIVE)
+        .trigger('alwaysOn.maphilight');
 }
 
 function showTooltip(event, element) {
